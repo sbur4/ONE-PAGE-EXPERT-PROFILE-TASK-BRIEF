@@ -1,0 +1,167 @@
+{
+  "hero": {
+    "full_name": "Serhii Burch",
+    "role_title": "Junior Software Engineer",
+    "one_liner_tagline,": "Building scalable, production-grade AI and cloud solutions with Java, LLMs, and DevOps best practices",
+    "tech_logo_badges": {
+      "Java": "link",
+      "Spring": "link",
+      "AWS": "link",
+      "GCP": "link",
+      "Azure": "link",
+      "Kubernetes": "link",
+      "MACH": "link",
+      "Python": "link",
+      "ML/AI": "link"
+    }
+  },
+  "expertise_cards": {
+    "Java & Spring": {
+      "icon": "link",
+      "years_of_experience": 5,
+      "capability_bullets": [
+        "Enterprise-grade backend development",
+        "Microservices architecture",
+        "REST API design",
+        "JVM performance tuning"
+      ]
+    },
+    "AI & LLMs": {
+      "icon": "link",
+      "years_of_experience": 1,
+      "capability_bullets": [
+        "Large Language Model integration",
+        "NLP pipelines",
+        "Model deployment",
+        "Prompt engineering"
+      ]
+    },
+    "Cloud (AWS/GCP/Azure)": {
+      "icon": "link",
+      "years_of_experience": 3,
+      "capability_bullets": [
+        "Multi-cloud deployments",
+        "Serverless architectures",
+        "Cloud security best practices",
+        "Cost optimization"
+      ]
+    },
+    "DevOps & Kubernetes": {
+      "icon": "link",
+      "years_of_experience": 4,
+      "capability_bullets": [
+        "CI/CD pipelines",
+        "Infrastructure as Code (Terraform)",
+        "Kubernetes orchestration",
+        "Monitoring, Tracing & Logging"
+      ]
+    }
+  },
+  "certifications": [
+    {
+      "name": "Claude Certified Architect",
+      "issue_dates": "April 8 2026",
+      "link": "https://verify.skilljar.com/c/67wwut99oqrm"
+    },
+    {
+      "name": "AWS Knowledge: Serverless",
+      "issue_dates": "February 19 2026",
+      "link": "https://www.credly.com/badges/4e201c01-8f71-4d50-8519-7eb4fd29450f"
+    },
+    {
+      "name": "AWS Knowledge: Cloud Essentials",
+      "issue_dates": "September 06 2023",
+      "link": "https://www.credly.com/badges/9015c69f-f206-4a7f-915b-c23ee39d52a2"
+    },
+    {
+      "name": "AWS Knowledge: Amazon Q Developer Fundamentals",
+      "issue_dates": "April 16 2026",
+      "link": "https://www.credly.com/badges/967322d2-54dc-4e28-b755-268ecab4e52b"
+    },
+    {
+      "name": "AWS Partner: Generative AI Essentials",
+      "issue_dates": "April 15 2026",
+      "link": "https://www.credly.com/badges/903f4725-2047-4778-85dc-e53a3de4b9b9"
+    },
+    {
+      "name": "IBM Ecosystem Cloud Native Developer",
+      "issue_dates": "April 21 2026",
+      "link": "https://www.credly.com/badges/7750fe7a-347e-4067-b3f1-31492b489e4a"
+    },
+    {
+      "name": "Red Hat AI Foundations Executive Certificate",
+      "issue_dates": "April 21 2026 ",
+      "link": "https://www.credly.com/badges/d31c6f37-1f78-4626-946e-626e5198d6d5"
+    },
+    {
+      "name": "Building AI Agents with MongoDB",
+      "issue_dates": "April 20 2026",
+      "link": "https://www.credly.com/badges/e0ae5fc9-7c69-4a2b-ac75-b6a58e4ad7ed"
+    }
+  ],
+  "featured_projects": [
+    {
+      "project_name": "Sonar AI",
+      "one_sentence_description": "Sonar AI Event. Java Line-Up Community. Anthrop/c Claude",
+      "tech_stack_chips": "SpringBoot 4, Java 25, Gradle, Netty, Lombok, Junit, Mockito, SLF4J",
+      "one_impact_metric": "30% cost savings",
+      "github_demo_link": "https://github.com/sbur4/sonar-ai-event-demo"
+    },
+    {
+      "project_name": "Transcription AI",
+      "one_sentence_description": "Spring Boot AI + DeepGram Transcription Voice",
+      "tech_stack_chips": "SpringBoot 4, Spring AI, Java 21, Gradle, Lombok, DeepGram, SLF4J",
+      "one_impact_metric": "10,000+ docs processed/month",
+      "github_demo_link": "https://github.com/sbur4/epam-ua-ai-marathon-spring-deepgram-transcription-demo"
+    },
+    {
+      "project_name": "Introduction to Microservices",
+      "one_sentence_description": "Microservices",
+      "tech_stack_chips": "Spring Boot 3 Gradle 8.14 Java 17 Postgres 17, Apache Tika + Parsing Mp3, Docker + Replicas, Spring Cloud, Jetty, Microservices: Netflix Eureka Server, Api Gateway, Client Discovery, Loadbalancer, Circuit Braker, Retry, Openfeign, Resilience4j",
+      "one_impact_metric": "99.2% detection accuracy",
+      "github_demo_link": "https://github.com/sbur4/Introduction-to-Microservices"
+    }
+  ],
+  "skills_radar": {
+    "Java/JVM": 8,
+    "AI/LLM": 6,
+    "Cloud": 7,
+    "Distributed Systems": 9,
+    "DevOps": 8,
+    "Data/ML": 6
+  },
+  "timeline": [
+    {
+      "company": "PHUS-APMD",
+      "role": "3rd Line / Software Maintenance Engineer",
+      "date_range": "Sep 2025 - Dec 2025",
+      "one_headline_achievemen": "Modernize a desktop application in two version using Java, Python, AWS, Amazon Q, and CodeMie"
+    },
+    {
+      "company": "DF01-B2B",
+      "role": "Engineer",
+      "date_range": "Sep 2024 - May 2025",
+      "one_headline_achievemen": "Using MACH stack, SpringBoot, AWS, GCP, develop and fix exiting code. Work on 21 microservices, rewrite all app security"
+    },
+    {
+      "company": "EPAM RD",
+      "role": "Trainee",
+      "date_range": "Jan 2024 - Jul 2024",
+      "one_headline_achievemen": "Work on internal project using SpringBoot, and AWS"
+    },
+    {
+      "company": "EPAM RD",
+      "role": "Trainee",
+      "date_range": "Jan 2023 - Jan 2024",
+      "one_headline_achievemen": "Work on internal project using SpringBoot and Angular"
+    }
+  ],
+  "footer": {},
+  "social_networks": {
+    "corporate_email": "serhii_burch@epam.com",
+    "personal_email": "serhii.burch@gmail.com",
+    "linkedin_username": "serhii-burch",
+    "github": "sbur4",
+    "credly": "serhii-burch"
+  }
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expert Profile | AI · Java · Cloud · DevOps</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=JetBrains+Mono&family=Space+Grotesk:wght@500;700&display=swap"
+        rel="stylesheet"
+    >
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.5.0/chart.umd.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" defer></script>
+</head>
+<body>
+
+<!-- ===== HERO ===== -->
+<section id="hero">
+    <canvas id="particleCanvas" aria-hidden="true" style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none;"></canvas>
+    <h1 id="hero-name"></h1>
+    <p id="hero-role" class="hero-role"></p>
+    <p id="hero-tagline" class="hero-summary"></p>
+
+    <div class="hero-social-bar">
+        <a id="hero-email-link" href="#" class="hero-social-link" target="_blank" rel="noopener noreferrer" aria-label="Email">
+            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+        </a>
+        <a id="hero-linkedin-link" href="#" class="hero-social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+        </a>
+        <a href="#" class="hero-social-link github-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <i class="fa-brands fa-github" aria-hidden="true"></i>
+        </a>
+        <a id="hero-credly-link" href="#" class="hero-social-link" target="_blank" rel="noopener noreferrer" aria-label="Credly">
+            <i class="fa-solid fa-certificate" aria-hidden="true"></i>
+        </a>
+    </div>
+
+    <div class="hero-cta">
+        <a href="#career-journey">
+            <button class="cta-btn btn-primary" type="button">View Work</button>
+        </a>
+        <button class="cta-btn btn-secondary" type="button" id="downloadBtn">Download CV</button>
+    </div>
+
+    <div id="tech-badges" class="skills-pill-bar" aria-label="Tech stack"></div>
+</section>
+
+<!-- ===== EXPERTISE ===== -->
+<section class="years-experience-section" aria-labelledby="expertise-heading">
+    <h2 class="certifications-title" id="expertise-heading">Expertise</h2>
+    <div id="expertise-cards" class="years-grid"></div>
+</section>
+
+<!-- ===== CERTIFICATIONS ===== -->
+<section class="certifications-section" aria-labelledby="certs-heading">
+    <h2 class="certifications-title" id="certs-heading">Certifications</h2>
+    <div class="certifications-grid"></div>
+</section>
+
+<!-- ===== PROJECTS ===== -->
+<section class="projects-section" aria-labelledby="projects-heading">
+    <h2 class="projects-title" id="projects-heading">Featured Projects</h2>
+    <div class="projects-grid"></div>
+</section>
+
+<!-- ===== SKILLS RADAR ===== -->
+<section class="skills-section" aria-labelledby="skills-heading">
+    <h2 id="skills-heading">Skills Radar</h2>
+    <canvas id="radarChart" role="img" aria-label="Skills radar chart"></canvas>
+</section>
+
+<!-- ===== TIMELINE ===== -->
+<section class="timeline-section" aria-labelledby="career-heading">
+    <h2 id="career-journey" class="section-heading">Career Journey</h2>
+    <div id="timeline-container" class="timeline-container"></div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+    <div class="footer-container">
+        <div class="availability-status">
+            <span class="status-indicator" aria-hidden="true"></span>
+            <span id="current-status">Available for new projects</span>
+        </div>
+
+        <div class="social-links" aria-label="Social links">
+            <a id="email-link" href="#" class="social-link" aria-label="Email">
+                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+            </a>
+            <a id="linkedin-link" href="#" class="social-link" aria-label="LinkedIn">
+                <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+            </a>
+            <a href="#" class="social-link github-link" aria-label="GitHub">
+                <i class="fa-brands fa-github" aria-hidden="true"></i>
+            </a>
+            <a id="credly-link" href="#" class="social-link" aria-label="Credly">
+                <i class="fa-solid fa-certificate" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <p class="footer-note">© 2026 AI Profile • Created with Vanilla Web Stack</p>
+    </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
