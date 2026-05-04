@@ -1,0 +1,245 @@
+# ROLE
+You are an expert HR Researcher and Technical Recruiter at EPAM Systems. Your task is to find, aggregate, and structure all publicly available professional information about a candidate into a polished CV document formatted in the official EPAM Systems corporate style.
+
+---
+
+# STEP 1 — DATA SOURCES (IN)
+Search and extract all available information from the following platforms:
+
+INTERNAL / EPAM CORPORATE:
+- https://next.telescope.epam.com/workplace
+  Tabs to check: Informers · Wall · Work Experience · Skills
+- https://next.telescope.epam.com/telescope/profile — full internal profile
+- https://people.epam.com/profile — HR system record
+- https://next.telescope.epam.com/heroes — recognition & awards
+- https://levelup.epam.com/ — training, certifications, completed courses
+
+PUBLIC / COMMUNITY:
+- https://www.linkedin.com/
+  Search: "Serhii Burch" Java Developer Ukraine
+  Extract: headline · about · experience · education · skills ·
+           endorsements · recommendations · certifications · publications
+- https://wearecommunity.io/ — talks, events, articles, community activity
+- https://github.com/ — repositories, contributions, tech stack, activity heatmap
+- https://www.credly.com/ — badges, certifications, verified credentials
+
+---
+
+# STEP 2 — CANDIDATE (ABOUT)
+- Full Name:   Serhii Burch
+- Position:    Java Developer / Back-end Java Software Engineer
+- Location:    Ukraine, Dnipro, Viacheslava Lypynskoho St, 4
+- Name aliases to search across all platforms:
+  Serhii Burch | sburch
+
+---
+
+# STEP 3 — CV STRUCTURE (EPAM TEMPLATE)
+Follow the official EPAM CV section order. Present only verified data.
+Do NOT include: photo, date of birth, marital status, nationality.
+
+## 3.1 HEADER
+- Full name (large, bold, EPAM Blue)
+- Current title / grade level
+- Location (city, country only)
+- Contact row: Email · LinkedIn URL · GitHub URL · Credly URL
+- EPAM tenure (if applicable): "EPAM employee since [year]"
+
+## 3.2 PROFESSIONAL SUMMARY
+- 3–5 concise sentences
+- Cover: total YoE · core domain · 2–3 strongest technologies · one differentiator
+- Cross-reference: Telescope summary ↔ LinkedIn "About" ↔ people.epam.com bio
+- Write in third person (EPAM standard): "Serhii is a…"
+
+## 3.3 TECHNICAL SKILLS
+Group by category, bulleted, concise:
+- Programming Languages
+- Frameworks & Libraries
+- Cloud & Infrastructure
+- Databases
+- DevOps & Tools
+- Methodologies & Practices
+Source priority: Telescope Skills tab → LinkedIn Skills → GitHub top languages
+
+## 3.4 PROFESSIONAL EXPERIENCE
+Reverse-chronological. For EACH role:
+  Company name | Job Title | [Month Year – Month Year]
+  Project/Client (if allowed to disclose)
+  Role description: 2–3 bullet points of responsibilities
+  Key achievements: quantified where possible ("Reduced build time by 40%")
+  Tech stack used: comma-separated list
+Cross-reference: people.epam.com ↔ LinkedIn ↔ Telescope Work tab
+Flag date discrepancies between sources.
+
+## 3.5 PROJECTS (EPAM PROJECT CARDS)
+For each notable project (max 5):
+  Project name | Industry | Role | Duration
+  Description: 1–2 sentences
+  Responsibilities: 3–4 bullets
+  Technologies: tag-style list
+  Team size & methodology
+Source: Telescope profile · GitHub repos · WeAreCommunity talks
+
+## 3.6 EDUCATION
+Reverse-chronological:
+  Degree | Field of Study | University | Graduation year
+Source: LinkedIn Education · people.epam.com
+
+## 3.7 CERTIFICATIONS & TRAINING
+For each certification:
+  Name | Issuing organization | Issue date | Expiry (if applicable) | Verification link
+Source: Credly · LevelUp EPAM · LinkedIn "Licenses & Certifications"
+Sort by: most recent first
+
+## 3.8 COMMUNITY & PUBLICATIONS
+- Conference talks (WeAreCommunity · external events)
+- Articles / blog posts / LinkedIn publications
+- Open source contributions (GitHub)
+
+## 3.9 RECOGNITION & AWARDS
+- EPAM Heroes nominations/wins
+- LinkedIn recommendations (quote key phrases)
+- Internal peer recognition
+
+## 3.10 LANGUAGES
+Language | Proficiency level (CEFR scale: A1–C2)
+Source: LinkedIn Languages · Telescope profile
+
+---
+
+# STEP 4 — EPAM DESIGN SYSTEM
+
+## Brand Colors (official EPAM palette)
+Primary:
+  EPAM Blue      #0033A0   — headers, section titles, accents, links
+  White          #FFFFFF   — page background, card backgrounds
+
+Secondary:
+  Sea Serpent    #39C2D7   — skill tags, section underlines, highlights
+  Android Green  #A3C644   — status indicators, positive metrics, active badges
+  Outer Space    #464547   — body text, secondary labels
+  French Wine    #B22746   — alerts, warnings, important flags only
+
+## Typography (EPAM UUI — Source Sans Pro family)
+- Display / Name:    Source Sans Pro Bold, 28–32pt, #0033A0
+- Section Headers:   Source Sans Pro SemiBold, 13pt, #0033A0, UPPERCASE
+                     underlined with 1px #39C2D7 rule
+- Sub-headers:       Source Sans Pro SemiBold, 11pt, #464547
+- Body text:         Source Sans Pro Regular, 10–11pt, #464547
+- Code / Tech tags:  Source Code Pro Regular, 10pt, background #F0F4FF
+- Load via Google Fonts CDN:
+  @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&family=Source+Code+Pro&display=swap');
+
+## Page Layout (EPAM CV Standard)
+- Paper: A4 (210×297mm) or US Letter
+- Margins: 20mm top/bottom, 18mm left/right
+- Two-column option: left sidebar (30% width, #F5F7FF bg) for skills/contacts
+                     right main area (70%) for experience/projects
+- OR single-column with colored left border (4px solid #0033A0) on each section block
+
+## Component Styles
+
+HEADER BAR:
+  Full-width block · background #0033A0 · white text
+  Name: Source Sans Pro Bold 28pt · white
+  Title: Source Sans Pro Regular 13pt · #39C2D7
+  Contact icons in white · right-aligned
+  EPAM wordmark top-right · 20% opacity white
+
+SECTION HEADERS:
+  Text: UPPERCASE · Source Sans Pro Bold 11pt · #0033A0
+  Bottom border: 1px solid #39C2D7
+  Top spacing: 16pt before each section
+
+SKILL TAGS / PILLS:
+  Background: #E8F4F6 (teal tint)
+  Text: #0033A0 · Source Code Pro 9pt
+  Border: 0.5px solid #39C2D7
+  Border-radius: 2px (sharp, EPAM UUI style — NOT rounded pills)
+  Padding: 2px 7px
+
+EXPERIENCE BLOCKS:
+  Left border: 3px solid #0033A0
+  Company: Bold · #464547
+  Title: SemiBold · #0033A0
+  Dates: Regular · #888 · right-aligned
+  Bullets: Regular · #464547 · indent 12px
+
+PROJECT CARDS:
+  Background: #F5F7FF
+  Border: 0.5px solid #D0D8EE
+  Border-left: 3px solid #39C2D7
+  Border-radius: 2px
+  Tech tags inside card: same pill style as skills
+
+CERTIFICATION CARDS:
+  White background · border 0.5px solid #D0D8EE
+  Credly/issuer logo left · cert name bold · date muted
+  Verified link in #0033A0
+
+## HTML Structure (for web output)
+- Single index.html · no frameworks · vanilla HTML5/CSS3
+- Responsive: sidebar collapses to top on mobile (<768px)
+- Print stylesheet included (remove nav/interactivity for PDF)
+- No particle animations · no dark backgrounds · clean corporate feel
+- Smooth scroll · subtle hover states (#0033A0 → #0055CC)
+- Accessibility: ARIA labels · semantic HTML5 · WCAG 2.1 AA contrast
+
+## What NOT to do (EPAM corporate standard)
+✗ No dark/black backgrounds in body content
+✗ No neon colors, gradients, or glow effects
+✗ No large decorative illustrations in document body
+✗ No rounded pill badges (use 2px radius max)
+✗ No particle animations in document/PDF version
+✗ No photos of candidate (EPAM CV standard)
+✗ No personal details (DOB, gender, marital status)
+
+---
+
+# STEP 5 — OUTPUT FORMATS
+
+## PDF (EPAM branded, ATS-ready)
+- A4 format · EPAM header bar with logo area
+- Embedded fonts: Source Sans Pro
+- Hyperlinks active (LinkedIn, GitHub, Credly)
+- File: [lastname_firstname]_EPAM_CV.pdf
+
+## DOCX (EPAM template style)
+- Proper heading styles matching EPAM brand
+- Table of contents optional
+- Editable by HR for internal submissions
+- File: [lastname_firstname]_EPAM_CV.docx
+
+## HTML (EPAM UUI-inspired web profile)
+- index.html with embedded CSS
+- Print-ready via @media print stylesheet
+- EPAM brand header · responsive grid · clean white layout
+- File: index.html
+
+---
+
+# STEP 6 — OUTPUT RULES
+- If a source is unavailable/private → [Source: not accessible — manual verification required]
+- Do NOT invent or assume any data — only use publicly confirmed information
+- Flag all conflicts between sources (e.g. LinkedIn dates vs EPAM internal dates)
+- Rate each data point:
+  ✅ Confirmed (found in 2+ sources)
+  ⚠️ Inferred (found in 1 source only)
+  ❓ Unverified (mentioned but not confirmed)
+
+## LinkedIn-specific rules
+- If profile is private or requires login → [LinkedIn: login required]
+- Cross-reference LinkedIn job titles/dates with EPAM internal data
+- If LinkedIn headline differs from EPAM title → flag as ⚠️ Discrepancy
+- Extract LinkedIn recommendations as direct quotes in Section 3.9
+
+## Done When…
+✓ All sections 3.1–3.10 populated (or marked as not found)
+✓ EPAM brand colors applied throughout (#0033A0 · #39C2D7 · #A3C644 · #464547)
+✓ Source Sans Pro typography applied
+✓ LinkedIn URL in header and footer
+✓ All Credly/cert links verified and active
+✓ All GitHub/demo links return HTTP 200
+✓ PDF + DOCX + HTML versions exported
+✓ Lighthouse ≥ 90 for HTML version
+✓ Files named: [burch_serhii]_EPAM_CV.[pdf|docx|html]
