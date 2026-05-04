@@ -1,7 +1,7 @@
 'use strict';
 
 // ─── Constants ────────────────────────────────────────────────────────────────
-const PROFILE_PATH = 'assets/telescope_profile.json';
+const PROFILE_PATH = 'assets/telescope_profile.js';
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
 
@@ -373,7 +373,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     // Load profile data once, then populate every section
     try {
-        const data = await fetchJSON(PROFILE_PATH);
+        const data = profileData;
 
         renderHero(data);
         renderExpertiseCards(data);

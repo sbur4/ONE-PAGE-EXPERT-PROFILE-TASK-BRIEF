@@ -1,4 +1,4 @@
-{
+const profileData = {
   "hero": {
     "full_name": "Serhii Burch",
     "role_title": "Junior Software Engineer",
@@ -117,7 +117,7 @@
     {
       "project_name": "Introduction to Microservices",
       "one_sentence_description": "Microservices",
-      "tech_stack_chips": "Spring Boot 3 Gradle 8.14 Java 17 Postgres 17, Apache Tika + Parsing Mp3, Docker + Replicas, Spring Cloud, Jetty, Microservices: Netflix Eureka Server, Api Gateway, Client Discovery, Loadbalancer, Circuit Braker, Retry, Openfeign, Resilience4j",
+      "tech_stack_chips": "Spring Boot 3, Gradle, Java 17, Postgres, Apache Tika, Docker, Spring Cloud, Jetty, Microservices: Netflix Eureka Server, Api Gateway, Client Discovery, Loadbalancer, Circuit Braker, Retry, Openfeign, Resilience4j",
       "one_impact_metric": "99.2% detection accuracy",
       "github_demo_link": "https://github.com/sbur4/Introduction-to-Microservices"
     }
