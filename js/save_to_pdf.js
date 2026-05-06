@@ -33,13 +33,6 @@ async function downloadPDF() {
                 transform-origin: top left !important;
                 width: 133% !important;
             }
-            .section { margin: 4px 0 !important; padding: 4px 0 !important; }
-            h1 { font-size: 16px !important; }
-            h2 { font-size: 12px !important; }
-            h3 { font-size: 10px !important; }
-            p, li { font-size: 8px !important; line-height: 1.0 !important; }
-            .radar-chart { max-height: 120px !important; max-width: 120px !important; }
-            .radar-chart canvas { max-height: 120px !important; max-width: 120px !important; }
         `;
 
         const styleElement = clone.createElement('style');
@@ -49,13 +42,16 @@ async function downloadPDF() {
         const options = {
             margin: 0.1,
             filename: filename,
-            image: { type: 'jpeg', quality: 1 },
+            image: {type: 'jpeg', quality: 1},
             html2canvas: {
                 scale: 1.1,
                 useCORS: true,
-                backgroundColor: '#ffffff',
+                backgroundColor: '#0D1117',
                 allowTaint: true,
-                onclone: function(clonedDoc) {
+                onclone: function (clonedDoc) {
+                    // Apply inline styles (most important!)
+                    applyInlineStylesToClone(clonedDoc);
+
                     // Additional canvas preservation in the cloned document
                     preserveCanvasInClone(clonedDoc);
                 }
@@ -66,7 +62,7 @@ async function downloadPDF() {
                 orientation: 'portrait',
                 compress: true
             },
-            pagebreak: { mode: 'avoid-all' }
+            pagebreak: {mode: 'avoid-all'}
         };
 
         return html2pdf().set(options).from(cloneBody).save();
@@ -76,6 +72,57 @@ async function downloadPDF() {
         throw error;
     }
 }
+
+// THIS IS THE KEY FUNCTION - Apply inline styles directly to elements
+function applyInlineStylesToClone(clonedDoc) {
+    console.log('Applying inline styles...');
+
+    // SKILL PILLS - Force white color
+    // const skillPills = clonedDoc.querySelectorAll('.tech-badges .skills-pill-bar .skill-pill');
+    // const skillPills = clonedDoc.querySelectorAll('.skill-pill');
+    const skillPills = clonedDoc.querySelectorAll('.skills-pill-bar');
+    console.log(`Found ${skillPills.length} skill pills`);
+    skillPills.forEach(el => {
+        el.style.setProperty('color', '#F0F6FF', 'important');
+        el.style.setProperty('-webkit-text-fill-color', '#F0F6FF', 'important');
+        // el.style.setProperty('border-color', '#00D4FF', 'important');
+        // Also set as attribute for maximum compatibility
+        el.setAttribute('style', el.getAttribute('style') + '; color: #F0F6FF !important;');
+        el.setAttribute('style', el.getAttribute('style') + '; color: #F0F6FF !important;');
+    });
+
+    // YEARS CARD LIST ITEMS - Force white color
+    const yearsListItems = clonedDoc.querySelectorAll('.years-card ul li, .years-card li');
+    console.log(`Found ${yearsListItems.length} years list items`);
+    yearsListItems.forEach(el => {
+        el.style.setProperty('color', '#F0F6FF', 'important');
+        el.style.setProperty('-webkit-text-fill-color', '#F0F6FF', 'important');
+        el.setAttribute('style', el.getAttribute('style') + '; color: #F0F6FF !important;');
+    });
+
+    // TECH CHIPS - Force cyan color
+    const techChips = clonedDoc.querySelectorAll('.project-stack .tech-chip');
+    // const techChips = clonedDoc.querySelectorAll('.project-stack');
+    console.log(`Found ${techChips.length} tech chips`);
+    techChips.forEach(el => {
+        el.style.setProperty('color', '#F0F6FF', 'important');
+        el.style.setProperty('-webkit-text-fill-color', '#F0F6FF', 'important');
+        // el.style.setProperty('border-color', '#F0F6FF', 'important');
+        // el.setAttribute('style', el.getAttribute('style') + '; color: #F0F6FF !important; border-color: #00D4FF !important;');
+        // el.setAttribute('style', el.getAttribute('style') + '; color: #F0F6FF !important; border-color: #00D4FF !important;');
+    });
+
+    // // PROJECT STACK - Force cyan color for all children
+    // const projectStacks = clonedDoc.querySelectorAll('.project-stack, .project-stack *');
+    // console.log(`Found ${projectStacks.length} project stack elements`);
+    // projectStacks.forEach(el => {
+    //     el.style.setProperty('color', '#F0F6FF', 'important');
+    //     el.style.setProperty('-webkit-text-fill-color', '#F0F6FF', 'important');
+    // });
+
+    console.log('Inline styles applied successfully');
+}
+
 
 // Function to preserve canvas elements (like radar chart)
 async function preserveCanvasElements(cloneDoc) {
